@@ -26,26 +26,29 @@ print(player)
 spatie = player.find(" ")
 print(spatie)
 
-first_name = player[0:6]
+first_name = player[0:spatie]
 print(first_name)
 
 first_name_len = len(first_name)
 print(first_name_len)
 
-last_name = 'Vanenburg'
+total_len = len(player)
+print(total_len)
+
+last_name = player[spatie:total_len]
 last_name_len = len(last_name)
 print(last_name_len)
 
-name_short = 'G. Vanenburg'
+name_short = player[0:1] + '.' + last_name
 print(name_short)
 
 chant = (first_name + '! ') * first_name_len
+chant_len = len(chant)
+chant = chant[0:chant_len-1]
+
 print(chant)
 
-chant_len = len(chant)
-print(chant_len)
-
-good_chant = chant[0:47]
+good_chant = chant[-1] is ' '
 print(good_chant)
 
 
