@@ -1,52 +1,54 @@
 # Do not modify these lines
-__winc_id__ = '7b9401ad7f544be2a23321292dd61cb6'
-__human_name__ = 'arguments'
+__winc_id__ = '71dd124b4a6e4d268f5973db521394ee'
+__human_name__ = 'strings'
 
 # Add your code after this line
-def greet(name, greeting = 'Hello, name!'):
-    greeting = greeting.replace('name', name)
-    return print(greeting)
-    
+#Deel 1
+scorer_1 = 'Ruud Gullit'
+scorer_2 = 'Marco van Basten'
 
-greet('Bob')
-greet('Mark')
+goal_0 = 32
+goal_1 = 54
 
-def force(mass, body = 'earth'):
-    gravitylist = dict([
-        ('sun', 274),
-        ('jupiter',  24.9),
-        ('neptune',  11.2),
-        ('saturn',  10.4),
-        ('earth', 9.8),
-        ('uranus', 8.9),
-        ('venus', 8.9),
-        ('mars', 3.7),
-        ('mercury', 3.7),
-        ('moon', 1.6),
-        ('pluto', 0.6)
-    ])
-    print(mass * gravitylist[body])
+scorers = (scorer_1) + ' ' + str(goal_0) + ', ' + (scorer_2) + ' ' + str(goal_1)
+print(scorers)
+
+report = (f'{scorer_1} scored in the {goal_0}nd minute\n{scorer_2} scored in the {goal_1}th minute')
+print(report)
 
 
-force(18.2)
+#Deel 2
+
+player = 'Gerald Vanenburg'
+print(player)
 
 
+spatie = player.find(" ")
+print(spatie)
 
-#def pull(mass1, mass2, distance):
-    
-G = 6.674 * (10**-11)
+first_name = player[0:spatie]
+print(first_name)
 
-def pull(m1, m2, d):
-    print(G * (m1 * m2) / (d**2))
-    return
+first_name_len = len(first_name)
+print(first_name_len)
 
+total_len = len(player)
+print(total_len)
 
-pull(100,200,0.5)
+last_name = player[spatie+1:total_len]
+last_name_len = len(last_name)
+print(last_name_len)
 
+name_short = player[0:1] + '. ' + last_name
+print(name_short)
 
+chant = (first_name + '! ') * first_name_len
+chant_len = len(chant)
+chant = chant[0:chant_len-1]
 
+print(chant)
 
-
-
+good_chant = chant[-1] != ' '
+print(good_chant)
 
 
